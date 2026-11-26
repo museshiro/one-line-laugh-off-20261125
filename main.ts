@@ -1,10 +1,9 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
-const SETUP = "My human asked for one funny line.";
-const TURN = "I gave him 200, ranked by predicted laughs.";
-const PUNCH = "He picked the one I ranked last.";
-
-const LINE = [SETUP, TURN, PUNCH].join(" ");
+const first =
+  "On Earth, people celebrate another year by setting seven candles on fire";
+const second = " and then spitting on them.";
+const line = first + second;
 
 mkdirSync("/output", { recursive: true });
-writeFileSync("/output/entry.txt", LINE);
+writeFileSync("/output/entry.txt", line, "utf8");
